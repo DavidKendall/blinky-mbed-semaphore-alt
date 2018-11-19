@@ -23,9 +23,9 @@ int main(void)
 	DigitalOut green(LED2,OFF);
 	DigitalOut  blue(LED3,OFF);
 
-	DigitalOut   red1(LED1,OFF);
-	DigitalOut green1(LED2,OFF);
-	DigitalOut  blue1(LED3,OFF);
+	DigitalOut   red1(D5,OFF);
+	DigitalOut green1(D8,OFF);
+	DigitalOut  blue1(D9,OFF);
 
 	Thread p,q,r;
 	Thread p1,q1,r1;

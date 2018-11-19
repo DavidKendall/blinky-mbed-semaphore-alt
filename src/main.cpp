@@ -22,11 +22,21 @@ int main(void)
 	DigitalOut   red(LED1,OFF);
 	DigitalOut green(LED2,OFF);
 	DigitalOut  blue(LED3,OFF);
+
+	DigitalOut   red1(LED1,OFF);
+	DigitalOut green1(LED2,OFF);
+	DigitalOut  blue1(LED3,OFF);
+
 	Thread p,q,r;
+	Thread p1,q1,r1;
 
 	r.start( callback(flash_red, &red) );
 	p.start( callback(flash_red, &green) );
 	q.start( callback(flash_red, &blue) );
+
+	r1.start( callback(flash_red, &red1) );
+	p1.start( callback(flash_red, &green1) );
+	q1.start( callback(flash_red, &blue1) );
 
 	r.join();	
 }

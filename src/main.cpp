@@ -2,7 +2,7 @@
 
 enum{ON,OFF}; /* a hack to invert bit logic for common anode LED */
 
-Semaphore flag(0);
+Semaphore flag(1);
 
 void flash_red(DigitalOut *led)
 {
